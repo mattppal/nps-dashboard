@@ -1,0 +1,7 @@
+nps_data:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      schema: nps_public
+      threads: 1

@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "dbt"
+version = "0.1.0"
+description = ""
+authors = ["Matt <59450879+mattppal@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+dbt-core = "^1.8.1"
+dbt-duckdb = "^1.8.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

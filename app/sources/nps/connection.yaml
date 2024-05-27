@@ -1,0 +1,5 @@
+# This file was automatically generated
+name: nps
+type: csv
+options:
+  filename: parks_data.csv
