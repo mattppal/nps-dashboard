@@ -38,6 +38,5 @@ models:
 seeds:
   parks_data:
   +quote_columns: true
-  +column_types: |
-    {RecreationVisits: string, NonRecreationVisits: string}
+  +column_types: {ParkName: string, UnitCode: string, ParkType: string, Region: string, State: string, Year: string, Month: string, RecreationVisits: string, NonRecreationVisits: string, RecreationHours: string, NonRecreationHours: string, ConcessionerLodging: string, ConcessionerCamping: string, TentCampers: string, RVCampers: string, Backcountry: string, NonRecreationOvernightStays: string, MiscellaneousOvernightStays: string, ParkNameTotal: string, UnitCodeTotal: string, ParkTypeTotal: string, RegionTotal: string, StateTotal: string, YearTotal: string, RecreationVisitsTotal: string, NonRecreationVisitsTotal: string, RecreationHoursTotal: string, NonRecreationHoursTotal: string, ConcessionerLodgingTotal: string, ConcessionerCampingTotal: string, TentCampersTotal: string, RVCampersTotal: string, BackcountryTotal: string, NonRecreationOvernightStaysTotal: string, MiscellaneousOvernightStaysTotal: string}
   +delimiter: ","
