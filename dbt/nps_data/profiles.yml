@@ -2,6 +2,11 @@ nps_data:
   target: dev
   outputs:
     dev:
+      database: nps_data
+      path: nps_data.db
+      extensions:
+        - httpfs
+        - parquet
+        - spatial
       type: duckdb
-      schema: nps_public
       threads: 1

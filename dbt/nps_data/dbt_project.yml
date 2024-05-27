@@ -30,13 +30,49 @@ clean-targets:         # directories to be removed by `dbt clean`
 # directory as views. These settings can be overridden in the individual model
 # files using the `{{ config(...) }}` macro.
 models:
-  nps_data:
-    # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+  nps_irma_1979_2023:
+    +materialized: view
 
 seeds:
-  parks_data:
-  +quote_columns: true
-  +column_types: {ParkName: string, UnitCode: string, ParkType: string, Region: string, State: string, Year: string, Month: string, RecreationVisits: string, NonRecreationVisits: string, RecreationHours: string, NonRecreationHours: string, ConcessionerLodging: string, ConcessionerCamping: string, TentCampers: string, RVCampers: string, Backcountry: string, NonRecreationOvernightStays: string, MiscellaneousOvernightStays: string, ParkNameTotal: string, UnitCodeTotal: string, ParkTypeTotal: string, RegionTotal: string, StateTotal: string, YearTotal: string, RecreationVisitsTotal: string, NonRecreationVisitsTotal: string, RecreationHoursTotal: string, NonRecreationHoursTotal: string, ConcessionerLodgingTotal: string, ConcessionerCampingTotal: string, TentCampersTotal: string, RVCampersTotal: string, BackcountryTotal: string, NonRecreationOvernightStaysTotal: string, MiscellaneousOvernightStaysTotal: string}
-  +delimiter: ","
+  nps_data:
+    administrative_boundaries_of_national_parks.gdb:
+      +enabled: false
+    nps_irma_1979_2023:
+      +quote_columns: true
+      +delimiter: ","
+      +column_types: 
+        ParkName: VARCHAR
+        UnitCode: VARCHAR
+        ParkType: VARCHAR
+        Region: VARCHAR
+        State: VARCHAR
+        Year: VARCHAR
+        Month: VARCHAR
+        RecreationVisits: VARCHAR
+        NonRecreationVisits: VARCHAR
+        RecreationHours: VARCHAR
+        NonRecreationHours: VARCHAR
+        ConcessionerLodging: VARCHAR
+        ConcessionerCamping: VARCHAR
+        TentCampers: VARCHAR
+        RVCampers: VARCHAR
+        Backcountry: VARCHAR
+        NonRecreationOvernightStays: VARCHAR
+        MiscellaneousOvernightStays: VARCHAR
+        ParkNameTotal: VARCHAR
+        UnitCodeTotal: VARCHAR
+        ParkTypeTotal: VARCHAR
+        RegionTotal: VARCHAR
+        StateTotal: VARCHAR
+        YearTotal: VARCHAR
+        RecreationVisitsTotal: VARCHAR
+        NonRecreationVisitsTotal: VARCHAR
+        RecreationHoursTotal: VARCHAR
+        NonRecreationHoursTotal: VARCHAR
+        ConcessionerLodgingTotal: VARCHAR
+        ConcessionerCampingTotal: VARCHAR
+        TentCampersTotal: VARCHAR
+        RVCampersTotal: VARCHAR
+        BackcountryTotal: VARCHAR
+        NonRecreationOvernightStaysTotal: VARCHAR
+        MiscellaneousOvernightStaysTotal: VARCHAR
