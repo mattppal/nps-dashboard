@@ -1,14 +1,20 @@
 [tool.poetry]
-name = "dbt"
+name = "nps_data"
 version = "0.1.0"
 description = ""
 authors = ["Matt <59450879+mattppal@users.noreply.github.com>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
-python = "^3.10"
-dbt-core = "^1.8.1"
-dbt-duckdb = "^1.8.0"
+python = ">=3.10,<3.12"
+dbt-duckdb = "1.7.0"
+sqlfluff = "^3.0.7"
+duckdb = "^0.10.3"
+pyarrow = "^16.1.0"
+dbt-coves = "^1.7.10"
+sqlfluff-templater-dbt = "^3.0.7"
+dbt-core = "1.7.0"
 
 
 [build-system]

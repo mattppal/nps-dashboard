@@ -7,3 +7,8 @@ static/data
 *.options.yaml
 .vscode/settings.json
 .env
+.ipynb_checkpoints
+*.db
+*.db.wal
+*scratch*
+*notes*
