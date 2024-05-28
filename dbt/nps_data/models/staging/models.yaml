@@ -1,0 +1,102 @@
+version: 2
+
+models:
+  - name: stg_nps_api__campgrounds
+    description: ''
+    columns:
+      - name: lastindexeddate
+      - name: relevancescore
+      - name: accessibility
+      - name: numberofsitesfirstcomefirstserve
+      - name: numberofsitesreservable
+      - name: multimedia
+      - name: weatheroverview
+      - name: images
+      - name: addresses
+      - name: campsites
+      - name: fees
+      - name: amenities
+      - name: ispassportstamplocation
+      - name: regulationsurl
+      - name: directionsoverview
+      - name: reservationinfo
+      - name: passportstamplocationdescription
+      - name: description
+      - name: directionsurl
+      - name: geometrypoiid
+      - name: name
+      - name: operatinghours
+      - name: reservationurl
+      - name: audiodescription
+      - name: parkcode
+      - name: latlong
+      - name: regulationsoverview
+      - name: passportstampimages
+      - name: latitude
+      - name: url
+      - name: longitude
+      - name: contacts
+      - name: id
+  - name: stg_nps_api__parkinglots
+    description: ''
+    columns:
+      - name: livestatus
+      - name: accessibility
+      - name: images
+      - name: operatinghours
+      - name: fees
+      - name: name
+      - name: geometrypoiid
+      - name: webcamurl
+      - name: managedbyorganization
+      - name: latitude
+      - name: description
+      - name: altname
+      - name: timezone
+      - name: relatedparks
+      - name: longitude
+      - name: contacts
+      - name: id
+  - name: stg_nps_api__visitorcenters
+    description: ''
+    columns:
+      - name: lastindexeddate
+      - name: relevancescore
+      - name: multimedia
+      - name: addresses
+      - name: images
+      - name: directionsinfo
+      - name: amenities
+      - name: passportstamplocationdescription
+      - name: directionsurl
+      - name: geometrypoiid
+      - name: name
+      - name: description
+      - name: ispassportstamplocation
+      - name: operatinghours
+      - name: audiodescription
+      - name: parkcode
+      - name: latlong
+      - name: passportstampimages
+      - name: latitude
+      - name: url
+      - name: longitude
+      - name: contacts
+      - name: id
+  - name: stg_nps_api__webcams
+    description: ''
+    columns:
+      - name: longitude
+      - name: url
+      - name: tags
+      - name: status
+      - name: relatedparks
+      - name: credit
+      - name: images
+      - name: geometrypoiid
+      - name: isstreaming
+      - name: description
+      - name: title
+      - name: latitude
+      - name: statusmessage
+      - name: id

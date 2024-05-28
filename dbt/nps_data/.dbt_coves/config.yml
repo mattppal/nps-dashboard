@@ -1,0 +1,26 @@
+generate:
+  sources:
+    database: nps_data
+    schemas: # List of schema names where to look for source tables
+      - raw_nps_api
+    sources_destination: "models/raw/{{ schema }}/sources.yaml" # Where sources yml files will be generated
+    models_destination: "models/staging/{{ schema | replace('raw','stg') }}/{{ schema | replace('raw','stg')  }}__{{ relation }}.sql" # Where models sql files will be generated
+    model_props_destination: "models/staging/models.yaml" # Where models yml files will be generated
+    update_strategy: update # Action to perform when a property file already exists. Options: update, recreate, fail, ask (per file)
+    templates_folder: ".dbt_coves/templates" # Folder where source generation jinja templates are located. Override default templates creating  source_props.yml, source_model_props.yml, and source_model.sql under this folder
+
+  # properties:
+  #   destination: "{{model_folder_path}}/models.yml" # Where models yml files will be generated
+  #   schemas:
+  #     - locations
+  #   update-strategy: ask # Action to perform when a property file already exists. Options: update, recreate, fail, ask (per file)
+  #   templates_folder: ".dbt_coves/templates" # Folder where source generation jinja templates are located. Override default template creating model_props.yml under this folder
+    # select: "models/staging/bays" # Filter model(s) to generate property file(s)
+    # exclude: "models/staging/bays/test_bay" # Filter model(s) to generate property file(s)
+    # selector: "selectors/bay_selector.yml" # Specify dbt selector for more complex model filtering
+
+  metadata:
+    # database: RAW # Database where to look for source tables
+    # schemas: # List of schema names where to look for source tables
+    #   - RAW
+    destination: "{{model_folder_path}}/{{model_file_name}}.yaml" # Where models yml files will be generated

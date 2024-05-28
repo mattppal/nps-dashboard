@@ -3,10 +3,14 @@
 WITH source_data AS (
 
   SELECT DISTINCT
+    park_id,
     park_name,
-    unit_code,
+    park_code,
+    park_full_name,
     park_type
-  FROM {{ ref('stg_nps_irma__usage_1979_2023') }}
+      AS region,
+    state
+  FROM {{ ref('stg_nps_boundaries__boundaries') }}
 
 )
 

@@ -1,7 +1,101 @@
+version: 2
+
 sources:
-  - name: jaffle_shop
-    database: raw  
-    schema: jaffle_shop  
+  - name: raw_nps_api
+    database: nps_data
     tables:
-      - name: orders
-      - name: customers
+      - name: campgrounds
+        columns:
+          - name: lastIndexedDate
+          - name: relevanceScore
+          - name: accessibility
+          - name: numberOfSitesFirstComeFirstServe
+          - name: numberOfSitesReservable
+          - name: multimedia
+          - name: weatherOverview
+          - name: images
+          - name: addresses
+          - name: campsites
+          - name: fees
+          - name: amenities
+          - name: isPassportStampLocation
+          - name: regulationsurl
+          - name: directionsOverview
+          - name: reservationInfo
+          - name: passportStampLocationDescription
+          - name: description
+          - name: directionsUrl
+          - name: geometryPoiId
+          - name: name
+          - name: operatingHours
+          - name: reservationUrl
+          - name: audioDescription
+          - name: parkCode
+          - name: latLong
+          - name: regulationsOverview
+          - name: passportStampImages
+          - name: latitude
+          - name: url
+          - name: longitude
+          - name: contacts
+          - name: id
+      - name: parkinglots
+        columns:
+          - name: liveStatus
+          - name: accessibility
+          - name: images
+          - name: operatingHours
+          - name: fees
+          - name: name
+          - name: geometryPoiId
+          - name: webcamUrl
+          - name: managedByOrganization
+          - name: latitude
+          - name: description
+          - name: altName
+          - name: timeZone
+          - name: relatedParks
+          - name: longitude
+          - name: contacts
+          - name: id
+      - name: visitorcenters
+        columns:
+          - name: lastIndexedDate
+          - name: relevanceScore
+          - name: multimedia
+          - name: addresses
+          - name: images
+          - name: directionsInfo
+          - name: amenities
+          - name: passportStampLocationDescription
+          - name: directionsUrl
+          - name: geometryPoiId
+          - name: name
+          - name: description
+          - name: isPassportStampLocation
+          - name: operatingHours
+          - name: audioDescription
+          - name: parkCode
+          - name: latLong
+          - name: passportStampImages
+          - name: latitude
+          - name: url
+          - name: longitude
+          - name: contacts
+          - name: id
+      - name: webcams
+        columns:
+          - name: longitude
+          - name: url
+          - name: tags
+          - name: status
+          - name: relatedParks
+          - name: credit
+          - name: images
+          - name: geometryPoiId
+          - name: isStreaming
+          - name: description
+          - name: title
+          - name: latitude
+          - name: statusMessage
+          - name: id
